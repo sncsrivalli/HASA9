@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-01-08T11:07:42 IST" name="Suite" finished-at="2023-01-08T11:07:42 IST" duration-ms="95">
+    <groups>
+    </groups>
+    <test started-at="2023-01-08T11:07:42 IST" name="Test" finished-at="2023-01-08T11:07:42 IST" duration-ms="95">
+      <class name="xmlParametrization.PracticeTest">
+        <test-method signature="demoTest(org.testng.xml.XmlTest)[pri:0, instance:xmlParametrization.PracticeTest@53aac487]" started-at="2023-01-08T11:07:42 IST" name="demoTest" finished-at="2023-01-08T11:07:42 IST" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.xml.XmlTest@64eb61d5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demoTest -->
+      </class> <!-- xmlParametrization.PracticeTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
