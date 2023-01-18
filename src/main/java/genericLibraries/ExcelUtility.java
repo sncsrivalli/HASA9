@@ -22,7 +22,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ExcelUtility {
 	private Workbook workbook;
 	private DataFormatter df;
-	private Sheet sheet;
+	
 	
 	/**
 	 * This method initializes excel workbook
@@ -41,6 +41,7 @@ public class ExcelUtility {
 		} catch (EncryptedDocumentException | IOException e) {
 			e.printStackTrace();
 		}
+		df = new DataFormatter();
 	}
 	
 	/**
@@ -51,20 +52,22 @@ public class ExcelUtility {
 	 * @return
 	 */
 	public String readDataFromExcel(String sheetName, int rowNum, int cellNum) {
-		df = new DataFormatter();
-		sheet = workbook.getSheet(sheetName);
+		
+		Sheet sheet = workbook.getSheet(sheetName);
 		return df.formatCellValue(sheet.getRow(rowNum).getCell(cellNum));
 	}
 
 	/**
 	 * This method is used to fetch multiple data in key-value format from excel
 	 * @param expectedTestName
+	 * @param sheetName 
 	 * @return
 	 */
-	public Map<String,String> readDataFromExcel(String expectedTestName){
+	public Map<String,String> readDataFromExcel(String expectedTestName, String sheetName){
+		Sheet sheet = workbook.getSheet(sheetName);
 		Map<String, String> map = new HashMap<>();
-		for(int i=0; i<sheet.getLastRowNum();i++) {
-			if(df.formatCellValue(sheet.getRow(i).getCell(2)).contains(expectedTestName)) {
+		for(int i=0; i< sheet.getLastRowNum();i++) {
+			if(df.formatCellValue(sheet.getRow(i).getCell(1)).contains(expectedTestName)) {
 				for(int j=i; j<sheet.getLastRowNum();j++) {
 					String key = df.formatCellValue(sheet.getRow(j).getCell(2));
 					String value = df.formatCellValue(sheet.getRow(j).getCell(3));
@@ -84,8 +87,10 @@ public class ExcelUtility {
 	 * @param cellNum
 	 * @param rownum
 	 * @param path
+	 * @param sheetName 
 	 */
-	public void setDataToExcel(String data, int cellNum, int rownum, String path) {
+	public void setDataToExcel(String data, int cellNum, int rownum, String path, String sheetName) {
+		Sheet sheet = workbook.getSheet(sheetName);
 		Cell cell = sheet.getRow(rownum).createCell(cellNum);
 		cell.setCellValue(data);
 		
@@ -112,8 +117,10 @@ public class ExcelUtility {
 	 * @param expectedTestName
 	 * @param status
 	 * @param path
+	 * @param sheetName 
 	 */
-	public void setDataToExcel(String expectedTestName, String status, String path) {
+	public void setDataToExcel(String expectedTestName, String status, String path, String sheetName) {
+		Sheet sheet = workbook.getSheet(sheetName);
 		for(int i=0; i< sheet.getLastRowNum();i++) {
 			if(df.formatCellValue(sheet.getRow(i).getCell(1)).contains(expectedTestName)) {
 				sheet.getRow(i).getCell(4).setCellValue(status);

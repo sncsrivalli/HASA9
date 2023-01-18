@@ -78,6 +78,21 @@ public class WebDriverUtility {
 	}
 	
 	/**
+	 * This method launches browser, maximizes it, navigates to application and also provides implicit wait statement
+	 * @param browser
+	 * @param url
+	 * @param time
+	 * @return
+	 */
+	public WebDriver openApplication(String browser, String url, long time) {
+		driver = launchBrowser(browser);
+		maximizeBrowser();
+		navigateToApplication(url);
+		waitTillElementFound(time);
+		
+		return driver;
+	}
+	/**
 	 * This method is used to wait until the visibility of web element
 	 * @param time
 	 * @param element
