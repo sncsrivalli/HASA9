@@ -41,7 +41,7 @@ public class ExcelUtility {
 		} catch (EncryptedDocumentException | IOException e) {
 			e.printStackTrace();
 		}
-		df = new DataFormatter();
+		
 	}
 	
 	/**
@@ -66,8 +66,8 @@ public class ExcelUtility {
 	public Map<String,String> readDataFromExcel(String expectedTestName, String sheetName){
 		Sheet sheet = workbook.getSheet(sheetName);
 		Map<String, String> map = new HashMap<>();
-		for(int i=0; i< sheet.getLastRowNum();i++) {
-			if(df.formatCellValue(sheet.getRow(i).getCell(1)).contains(expectedTestName)) {
+		for(int i=0; i<= sheet.getLastRowNum();i++) {
+			if(df.formatCellValue(sheet.getRow(i).getCell(1)).equals(expectedTestName)) {
 				for(int j=i; j<sheet.getLastRowNum();j++) {
 					String key = df.formatCellValue(sheet.getRow(j).getCell(2));
 					String value = df.formatCellValue(sheet.getRow(j).getCell(3));
