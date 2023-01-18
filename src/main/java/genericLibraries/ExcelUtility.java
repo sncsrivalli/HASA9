@@ -21,9 +21,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
  */
 public class ExcelUtility {
 	private Workbook workbook;
-	private DataFormatter df;
-	
-	
+		
 	/**
 	 * This method initializes excel workbook
 	 * @param path
@@ -52,7 +50,7 @@ public class ExcelUtility {
 	 * @return
 	 */
 	public String readDataFromExcel(String sheetName, int rowNum, int cellNum) {
-		
+		DataFormatter df = new DataFormatter();
 		Sheet sheet = workbook.getSheet(sheetName);
 		return df.formatCellValue(sheet.getRow(rowNum).getCell(cellNum));
 	}
@@ -64,6 +62,7 @@ public class ExcelUtility {
 	 * @return
 	 */
 	public Map<String,String> readDataFromExcel(String expectedTestName, String sheetName){
+		DataFormatter df = new DataFormatter();
 		Sheet sheet = workbook.getSheet(sheetName);
 		Map<String, String> map = new HashMap<>();
 		for(int i=0; i<= sheet.getLastRowNum();i++) {
@@ -90,6 +89,7 @@ public class ExcelUtility {
 	 * @param sheetName 
 	 */
 	public void setDataToExcel(String data, int cellNum, int rownum, String path, String sheetName) {
+		
 		Sheet sheet = workbook.getSheet(sheetName);
 		Cell cell = sheet.getRow(rownum).createCell(cellNum);
 		cell.setCellValue(data);
@@ -120,6 +120,7 @@ public class ExcelUtility {
 	 * @param sheetName 
 	 */
 	public void setDataToExcel(String expectedTestName, String status, String path, String sheetName) {
+		DataFormatter df = new DataFormatter();
 		Sheet sheet = workbook.getSheet(sheetName);
 		for(int i=0; i< sheet.getLastRowNum();i++) {
 			if(df.formatCellValue(sheet.getRow(i).getCell(1)).contains(expectedTestName)) {

@@ -26,15 +26,6 @@ public class CreateOrganizationTest {
 		long time = Long.parseLong(property.fetchProperty("timeouts"));
 		WebDriver driver = web.openApplication(property.fetchProperty("browser"), property.fetchProperty("url"), time);
 		
-//		Random random = new Random();
-//		int randomNum = random.nextInt(100);
-//		
-//		WebDriverManager.chromedriver().setup();
-//		WebDriver driver = new ChromeDriver();
-//		driver.manage().window().maximize();
-//		driver.get("http://localhost:8888/");
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
 		String title = driver.findElement(By.xpath("//a[@href='http://www.vtiger.com']")).getText();
 		
 		if(title.contains("vtiger"))
@@ -75,8 +66,6 @@ public class CreateOrganizationTest {
 		
 		WebElement industryDropdown = driver.findElement(By.name("industry"));
 		web.dropdown(map.get("Industry"), industryDropdown);
-//		Select industry = new Select(industryDropdown);
-//		industry.selectByValue();
 		
 		driver.findElement(By.xpath("//input[contains(@value,'Save')]")).click();
 		
@@ -95,9 +84,7 @@ public class CreateOrganizationTest {
 		
 		WebElement administratorIcon = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
 		web.mouseHover(administratorIcon);
-//		Actions a = new Actions(driver);
-//		a.moveToElement(administratorIcon).perform();
-//		
+
 		driver.findElement(By.xpath("//a[.='Sign Out']")).click();
 		
 		driver.quit();
