@@ -1,5 +1,4 @@
 package chromeoptions;
-
 import java.time.Duration;
 import java.util.HashMap;
 
@@ -30,7 +29,5 @@ public class HandleAnyNotifications {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		driver.findElement(By.id("webcam-launcher")).click();
-
 	}
-
 }
