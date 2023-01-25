@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- BeforeSuite -->
+<suite name="Suite">
+	<!-- BeforeTest -->
+	<test thread-count="5" name="Test">
+		<classes>
+			<!-- BeforeClass -->
+			<class name="testng.PracticeTest">
+				<methods>
+					<!-- BeforeMethod -->
+					<include name="demoTest"></include> <!-- @Test -->
+					<!-- AfterMethod -->	
+				</methods>
+			</class>
+			<!-- AfterClass -->
+			
+			<!-- BeforeClass -->
+			<class name="testng.PracticeTest">
+				<methods>
+					<!-- BeforeMethod -->
+					<include name="demoTest"></include> <!-- @Test -->
+					<!-- AfterMethod -->	
+				</methods>
+			</class>
+			<!-- AfterClass -->
+		</classes>
+	</test> <!-- Test -->
+	<!-- AfterTest -->
+</suite> <!-- Suite -->
+<!-- AfterSuite -->
