@@ -1,71 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="10" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-25T18:23:48 IST" name="Suite" finished-at="2023-01-25T18:23:48 IST" duration-ms="121">
+  <suite started-at="2023-01-28T18:06:52 IST" name="Default suite" finished-at="2023-01-28T18:06:52 IST" duration-ms="83">
     <groups>
-      <group name="Sanity">
-        <method signature="FirstTest.test0()[pri:0, instance:groupexecution.FirstTest@1e0b4072]" name="test0" class="groupexecution.FirstTest"/>
-        <method signature="FirstTest.test2()[pri:0, instance:groupexecution.FirstTest@1e0b4072]" name="test2" class="groupexecution.FirstTest"/>
-        <method signature="SecondTest.test0()[pri:0, instance:groupexecution.SecondTest@4686afc2]" name="test0" class="groupexecution.SecondTest"/>
-        <method signature="SecondTest.test2()[pri:0, instance:groupexecution.SecondTest@4686afc2]" name="test2" class="groupexecution.SecondTest"/>
-      </group> <!-- Sanity -->
-      <group name="Regression">
-        <method signature="SecondTest.test1()[pri:0, instance:groupexecution.SecondTest@4686afc2]" name="test1" class="groupexecution.SecondTest"/>
-        <method signature="SecondTest.test2()[pri:0, instance:groupexecution.SecondTest@4686afc2]" name="test2" class="groupexecution.SecondTest"/>
-        <method signature="ThirdTest.test1()[pri:0, instance:groupexecution.ThirdTest@130c12b7]" name="test1" class="groupexecution.ThirdTest"/>
-        <method signature="ThirdTest.test2()[pri:0, instance:groupexecution.ThirdTest@130c12b7]" name="test2" class="groupexecution.ThirdTest"/>
-      </group> <!-- Regression -->
-      <group name="Smoke">
-        <method signature="FirstTest.test1()[pri:0, instance:groupexecution.FirstTest@1e0b4072]" name="test1" class="groupexecution.FirstTest"/>
-        <method signature="FirstTest.test2()[pri:0, instance:groupexecution.FirstTest@1e0b4072]" name="test2" class="groupexecution.FirstTest"/>
-        <method signature="ThirdTest.test0()[pri:0, instance:groupexecution.ThirdTest@130c12b7]" name="test0" class="groupexecution.ThirdTest"/>
-        <method signature="ThirdTest.test2()[pri:0, instance:groupexecution.ThirdTest@130c12b7]" name="test2" class="groupexecution.ThirdTest"/>
-      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2023-01-25T18:23:48 IST" name="Test" finished-at="2023-01-25T18:23:48 IST" duration-ms="121">
-      <class name="groupexecution.ThirdTest">
-        <test-method signature="test0()[pri:0, instance:groupexecution.ThirdTest@130c12b7]" started-at="2023-01-25T18:23:48 IST" name="test0" finished-at="2023-01-25T18:23:48 IST" duration-ms="18" status="PASS">
+    <test started-at="2023-01-28T18:06:52 IST" name="Default test" finished-at="2023-01-28T18:06:52 IST" duration-ms="83">
+      <class name="assertions.SoftAssertPractice">
+        <test-method signature="demo1()[pri:0, instance:assertions.SoftAssertPractice@783a467b]" started-at="2023-01-28T18:06:52 IST" name="demo1" finished-at="2023-01-28T18:06:52 IST" duration-ms="23" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [Hello] but found [Hi]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [Hello] but found [Hi]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at assertions.SoftAssertPractice.demo1(SoftAssertPractice.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test0 -->
-        <test-method signature="test1()[pri:0, instance:groupexecution.ThirdTest@130c12b7]" started-at="2023-01-25T18:23:48 IST" name="test1" finished-at="2023-01-25T18:23:48 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- demo1 -->
+        <test-method signature="demo2()[pri:0, instance:assertions.SoftAssertPractice@783a467b]" started-at="2023-01-28T18:06:52 IST" name="demo2" finished-at="2023-01-28T18:06:52 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:0, instance:groupexecution.ThirdTest@130c12b7]" started-at="2023-01-25T18:23:48 IST" name="test2" finished-at="2023-01-25T18:23:48 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-      </class> <!-- groupexecution.ThirdTest -->
-      <class name="groupexecution.SecondTest">
-        <test-method signature="test0()[pri:0, instance:groupexecution.SecondTest@4686afc2]" started-at="2023-01-25T18:23:48 IST" name="test0" finished-at="2023-01-25T18:23:48 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test0 -->
-        <test-method signature="test1()[pri:0, instance:groupexecution.SecondTest@4686afc2]" started-at="2023-01-25T18:23:48 IST" name="test1" finished-at="2023-01-25T18:23:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:0, instance:groupexecution.SecondTest@4686afc2]" started-at="2023-01-25T18:23:48 IST" name="test2" finished-at="2023-01-25T18:23:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-      </class> <!-- groupexecution.SecondTest -->
-      <class name="groupexecution.FirstTest">
-        <test-method signature="test0()[pri:0, instance:groupexecution.FirstTest@1e0b4072]" started-at="2023-01-25T18:23:48 IST" name="test0" finished-at="2023-01-25T18:23:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test0 -->
-        <test-method signature="test1()[pri:0, instance:groupexecution.FirstTest@1e0b4072]" started-at="2023-01-25T18:23:48 IST" name="test1" finished-at="2023-01-25T18:23:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:0, instance:groupexecution.FirstTest@1e0b4072]" started-at="2023-01-25T18:23:48 IST" name="test2" finished-at="2023-01-25T18:23:48 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-      </class> <!-- groupexecution.FirstTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- demo2 -->
+      </class> <!-- assertions.SoftAssertPractice -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
