@@ -2,23 +2,25 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-28T18:06:52 IST" name="Default suite" finished-at="2023-01-28T18:06:52 IST" duration-ms="83">
+  <suite started-at="2023-01-30T18:33:51 IST" name="Default suite" finished-at="2023-01-30T18:33:51 IST" duration-ms="80">
     <groups>
     </groups>
-    <test started-at="2023-01-28T18:06:52 IST" name="Default test" finished-at="2023-01-28T18:06:52 IST" duration-ms="83">
-      <class name="assertions.SoftAssertPractice">
-        <test-method signature="demo1()[pri:0, instance:assertions.SoftAssertPractice@783a467b]" started-at="2023-01-28T18:06:52 IST" name="demo1" finished-at="2023-01-28T18:06:52 IST" duration-ms="23" status="FAIL">
+    <test started-at="2023-01-30T18:33:51 IST" name="Default test" finished-at="2023-01-30T18:33:51 IST" duration-ms="80">
+      <class name="assertions.HardAssert">
+        <test-method signature="demo1()[pri:0, instance:assertions.HardAssert@783a467b]" started-at="2023-01-30T18:33:51 IST" name="demo1" finished-at="2023-01-30T18:33:51 IST" duration-ms="20" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The following asserts failed:
-expected [Hello] but found [Hi]]]>
+              <![CDATA[expected [Hello] but found [Hi]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [Hello] but found [Hi]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at assertions.SoftAssertPractice.demo1(SoftAssertPractice.java:19)
+              <![CDATA[java.lang.AssertionError: expected [Hello] but found [Hi]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at assertions.HardAssert.demo1(HardAssert.java:13)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,11 +55,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- demo1 -->
-        <test-method signature="demo2()[pri:0, instance:assertions.SoftAssertPractice@783a467b]" started-at="2023-01-28T18:06:52 IST" name="demo2" finished-at="2023-01-28T18:06:52 IST" duration-ms="2" status="PASS">
+        <test-method signature="demo2()[pri:0, instance:assertions.HardAssert@783a467b]" started-at="2023-01-30T18:33:51 IST" name="demo2" finished-at="2023-01-30T18:33:51 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- demo2 -->
-      </class> <!-- assertions.SoftAssertPractice -->
+      </class> <!-- assertions.HardAssert -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
