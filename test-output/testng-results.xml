@@ -1,17 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-01T18:40:06 IST" name="Default suite" finished-at="2023-02-01T18:40:15 IST" duration-ms="8783">
+  <suite started-at="2023-02-02T18:25:51 IST" name="Suite" finished-at="2023-02-02T18:26:04 IST" duration-ms="12933">
     <groups>
     </groups>
-    <test started-at="2023-02-01T18:40:06 IST" name="Default test" finished-at="2023-02-01T18:40:15 IST" duration-ms="8783">
-      <class name="grid.Practice1">
-        <test-method signature="demo()[pri:0, instance:grid.Practice1@1ed6388a]" started-at="2023-02-01T18:40:07 IST" name="demo" finished-at="2023-02-01T18:40:15 IST" duration-ms="8709" status="PASS">
+    <test started-at="2023-02-02T18:25:51 IST" name="Test1" finished-at="2023-02-02T18:25:58 IST" duration-ms="7909">
+      <class name="grid.CrossBrowserparallelTest">
+        <test-method is-config="true" signature="methodConfiguration(java.lang.String)[pri:0, instance:grid.CrossBrowserparallelTest@25641d39]" started-at="2023-02-02T18:25:51 IST" name="methodConfiguration" finished-at="2023-02-02T18:25:54 IST" duration-ms="3239" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- demo -->
-      </class> <!-- grid.Practice1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- methodConfiguration -->
+        <test-method signature="test()[pri:0, instance:grid.CrossBrowserparallelTest@25641d39]" started-at="2023-02-02T18:25:54 IST" name="test" finished-at="2023-02-02T18:25:58 IST" duration-ms="4617" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- grid.CrossBrowserparallelTest -->
+    </test> <!-- Test1 -->
+    <test started-at="2023-02-02T18:25:51 IST" name="Test2" finished-at="2023-02-02T18:26:04 IST" duration-ms="12933">
+      <class name="grid.CrossBrowserparallelTest">
+        <test-method is-config="true" signature="methodConfiguration(java.lang.String)[pri:0, instance:grid.CrossBrowserparallelTest@28261e8e]" started-at="2023-02-02T18:25:51 IST" name="methodConfiguration" finished-at="2023-02-02T18:25:57 IST" duration-ms="6215" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodConfiguration -->
+        <test-method signature="test()[pri:0, instance:grid.CrossBrowserparallelTest@28261e8e]" started-at="2023-02-02T18:25:57 IST" name="test" finished-at="2023-02-02T18:26:04 IST" duration-ms="6675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- grid.CrossBrowserparallelTest -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite -->
 </testng-results>
