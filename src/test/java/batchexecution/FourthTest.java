@@ -6,7 +6,7 @@ public class FourthTest {
 	
 	@Test
 	public void fourthTest() {
-		System.out.println("fourthTest");
+		System.out.println("fourth Test");
 	}
 
 }
